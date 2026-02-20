@@ -1,0 +1,78 @@
+/* IMPORT FONT (very important) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 25px;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(to bottom, #0B0F1A, #070707);
+  border-bottom: 2px solid #1a1a1a;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  position: fixed;
+  z-index: 1000;
+
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 900;
+  color: #f7b500;
+  cursor: pointer;
+}
+.nav {
+  display: flex;
+  gap: 35px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f7b500;
+}
+
+.nav-link.active {
+  color: #f7b500;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.small-icon {
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.small-icon:hover {
+  color: #f7b500;
+}
+
+.gold-icon {
+  background: linear-gradient(145deg, #f7b500, #ffcc33);
+  color: #000;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gold-icon:hover {
+  box-shadow: 0 0 15px rgba(247,181,0,0.6);
+  transform: translateY(-2px);
+}

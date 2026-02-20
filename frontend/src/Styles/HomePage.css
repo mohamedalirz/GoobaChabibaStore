@@ -1,0 +1,118 @@
+
+header ul{
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+}
+.hero-banner{
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center; ;
+    position: relative;
+    height: 80vh;
+    background-image: url("../../public/banner.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-banner .hero-btn{
+    position: absolute;
+    bottom: 40px;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+button{
+    padding: 14px 35px;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 17px;
+    color: white;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+}
+
+
+button:first-child{
+    background: linear-gradient(to right, #c99508, #F5B301, #c59614);
+}
+
+button:last-child{
+    color: white;
+    background: linear-gradient(to right, #043563, #5087ec, #020261);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.chabiba-drop{
+    padding: 60px 10%;
+    color: white;
+    text-align: center;
+}
+
+.chabiba-drop h1{
+    margin-bottom: 40px;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+.chabiba-products{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.product{
+    background-color: #1A1F2E;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.product:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(250, 220, 137, 0.062);
+}
+.product-img{
+    width: 100%;
+    height: 270px;
+    background-color: #111827;
+    align-items: center;
+}
+
+.product-img img{
+    width: 100%;
+    object-fit: contain;
+}
+.product-details{
+    padding: 20px;
+}
+
+.product-details h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-details p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #F5B301;
+}
+.product-details button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 17px;
+    color: white;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    background: linear-gradient(to right, #c99508, #F5B301, #c59614);
+}

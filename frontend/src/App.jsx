@@ -1,24 +1,14 @@
 import './App.css';
-import ShopPage from './components/ShopPage';
-import ProductPage from './components/ProductPage';
-import CartPage from './components/CartPage';
-import CheckoutPage from './components/CheckoutPage';
-import AdminDashboard from './admin/AdminDashboard';
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Main from "./component/Main";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<ShopPage />} />
-          <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/cart/:userId" element={<CartPage />} />
-          <Route path="/checkout/:userId" element={<CheckoutPage />} />
-          <Route path="/admin" element={<AdminDashboard />}/>
-        </Routes>
-      </Router>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
