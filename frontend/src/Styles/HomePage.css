@@ -1,118 +1,292 @@
-
-header ul{
-    display: flex;
-    list-style-type: none;
-    gap: 25px;
-}
-.hero-banner{
-    display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center; ;
-    position: relative;
-    height: 80vh;
-    background-image: url("../../public/banner.png");
-    background-size: cover;
-    background-position: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.hero-banner .hero-btn{
-    position: absolute;
-    bottom: 40px;
-    align-items: center;
-    display: flex;
-    gap: 20px;
+body {
+  background: #0B0F1A;
+  color: white;
 }
 
-button{
-    padding: 14px 35px;
-    font-family: inherit;
-    cursor: pointer;
-    font-weight: 800;
-    font-size: 17px;
-    color: white;
-    border: none;
-    letter-spacing: 0.05em;
-    border-radius: 16px;
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url("../../public/banner2.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.39), #0b0f1a69);
 }
 
 
-button:first-child{
-    background: linear-gradient(to right, #c99508, #F5B301, #c59614);
+/* Dark + Fire overlay */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(245,179,1,0.25), rgba(0,0,0,0.85));
 }
 
-button:last-child{
-    color: white;
-    background: linear-gradient(to right, #043563, #5087ec, #020261);
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  
 }
 
-button span {
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-}
-.chabiba-drop{
-    padding: 60px 10%;
-    color: white;
-    text-align: center;
+/* 3D Gold Logo */
+.gooba-logo {
+  font-size: 100px;
+  font-weight: 900;
+  color: #F5B301;
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 4px 0 #C89200,
+    0 8px 0 #1E3A8A,
+    0 0 40px rgba(245,179,1,0.9);
 }
 
-.chabiba-drop h1{
-    margin-bottom: 40px;
-    font-size: 32px;
-    letter-spacing: 2px;
-}
-.chabiba-products{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-.product{
-    background-color: #1A1F2E;
-    width: 280px;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s ease;
-    cursor: pointer;
+/* Collection text */
+.collection-text {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: white;
+  margin-bottom: 30px;
 }
 
-.product:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(250, 220, 137, 0.062);
-}
-.product-img{
-    width: 100%;
-    height: 270px;
-    background-color: #111827;
-    align-items: center;
+/* Buttons container */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
 }
 
-.product-img img{
-    width: 100%;
-    object-fit: contain;
-}
-.product-details{
-    padding: 20px;
+/* Gold Button */
+.btn-gold {
+  background: linear-gradient(145deg, #FFD54A, #F5B301);
+  color: black;
+  border: none;
+  padding: 16px 34px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(245,179,1,0.6);
+  transition: 0.3s;
 }
 
-.product-details h2{
-    font-size: 18px;
-    margin-bottom: 10px;
+.btn-gold:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(245,179,1,1);
 }
 
-.product-details p{
-    font-size: 18px;
-    font-weight: bold;
-    color: #F5B301;
+/* Blue Button */
+.btn-blue {
+  background: linear-gradient(145deg, #2563EB, #1E3A8A);
+  color: white;
+  border: none;
+  padding: 16px 34px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(37,99,235,0.7);
+  transition: 0.3s;
 }
-.product-details button{
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-family: inherit;
-    cursor: pointer;
-    font-weight: 800;
-    font-size: 17px;
-    color: white;
-    border: none;
-    letter-spacing: 0.05em;
-    border-radius: 16px;
-    background: linear-gradient(to right, #c99508, #F5B301, #c59614);
+
+.btn-blue:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(37,99,235,1);
+}
+
+/* ================= DROP SECTION ================= */
+
+.drop {
+  padding: 100px 8%;
+  background: linear-gradient(to bottom, #0B0F1A, #0F172A);
+  text-align: center;
+}
+
+.drop-title {
+  font-size: 34px;
+  margin-bottom: 60px;
+  color: #F5B301;
+  text-shadow: 0 0 20px rgba(245,179,1,0.7);
+}
+
+/* Products Grid */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Product Card */
+.card {
+  position: relative;
+  width: 300px;
+  background: url("../../public/banner2.png") center/cover no-repeat;
+  border-radius: 20px;
+  padding: 30px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 0, 19, 0.75); /* 🔥 darkness level */
+  z-index: 1;
+}
+.card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gold Glow Background Effect */
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245,179,1,0.25), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover .card-glow {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 40px rgba(245,179,1,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-weight: bold;
+  color: #F5B301;
+  margin-bottom: 20px;
+}
+
+.offers {
+  padding: 20px;
+  background: linear-gradient(to bottom, #0F172A, #0B0F1A);
+  text-align: center;
+  color: white;
+}
+
+.offers-title {
+  font-size: 32px;
+  margin-bottom: 60px;
+  color: #F5B301;
+  text-shadow: 0 0 20px rgba(245,179,1,0.6);
+}
+
+.offers-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.offer-card {
+  position: relative;
+  width: 100%;
+  background: url("../../public/banner2.png") center/cover no-repeat;
+  border-radius: 20px;
+  padding: 40px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+/* Dark overlay */
+.offer-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1;
+}
+
+.offer-card * {
+  position: relative;
+  z-index: 2;
+}
+.offer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.offer-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.offer-content {
+  text-align: center;
+}
+
+.offer-card:hover .offer-image img {
+  transform: scale(1.1);
+}
+
+.offer-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #F5B301;
+  color: black;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(245,179,1,0.7);
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+.new-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #F5B301;
+  margin-bottom: 20px;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(245,179,1,0.5);
 }
