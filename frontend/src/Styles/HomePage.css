@@ -271,6 +271,7 @@ body {
   padding: 8px 14px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(245,179,1,0.7);
+  z-index: 3;
 }
 
 .old-price {
