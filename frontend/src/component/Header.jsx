@@ -1,35 +1,45 @@
-import { FaShoppingCart, FaUser, FaTrophy } from "react-icons/fa";
+import { FaShoppingCart, FaUser, FaBars } from "react-icons/fa";
+import { useState } from "react";
 import "./header.css";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="header">
+    <>
+      <header className="header">
+        <div className="logo">GOOBA</div>
 
-      
-      <div className="logo">
-        GOOBA
-      </div>
+        {/* Desktop Nav */}
+        <nav className="nav desktop-nav">
+          <a href="/" className="nav-link active">HOME</a>
+          <a href="/ProductDetails/:id" className="nav-link">SHOP</a>
+          <a href="#membership" className="nav-link">MEMBERSHIP</a>
+          <a href="https://kick.com/gooba_off" target="_blank" rel="noopener noreferrer" className="nav-link">LIVE</a>
+          <a href="/Footer" className="nav-link">ABOUT</a>
+        </nav>
 
-      
-      <nav className="nav">
-        <a href="/" className="nav-link active">HOME</a>
-        <a href="/" className="nav-link">SHOP</a>
-        <a href="#membership" className="nav-link">MEMBERSHIP</a>
-        <a href="https://kick.com/gooba_off" target="_blank" rel="noopener noreferrer" className="nav-link">LIVE</a>
-        <a href="/Footer" className="nav-link">ABOUT</a>
+        <div className="right-section">
+          
 
-      </nav>
+          <div className="gold-icon">
+            <a href="/cart/:userId"><FaShoppingCart /></a>
+          </div>
 
-     
-      <div className="right-section">
-        <a href="/Profile"><FaUser className="small-icon" /></a>
-
-        <div className="gold-icon">
-          <a href="/cart/:userId"><FaShoppingCart /></a>
+          {/* Mobile Menu Icon */}
+          <FaBars className="menu-icon" onClick={() => setOpen(!open)} />
         </div>
-      </div>
+      </header>
 
-    </header>
+      {/* Sidebar */}
+      <div className={`sidebar ${open ? "active" : ""}`}>
+        <a href="/">HOME</a>
+        <a href="/">SHOP</a>
+        <a href="#membership">MEMBERSHIP</a>
+        <a href="https://kick.com/gooba_off" target="_blank" rel="noopener noreferrer">LIVE</a>
+        <a href="/Footer">ABOUT</a>
+      </div>
+    </>
   );
 }
 
