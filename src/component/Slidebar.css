@@ -1,0 +1,94 @@
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.shop-sidebar {
+  width: 260px;
+  padding: 30px 25px;
+  background: rgba(2, 8, 23, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  min-height: 100vh;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  color: #ffc107;
+  font-size: 13px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* CATEGORY */
+.category {
+  padding: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 6px;
+}
+
+.category:hover {
+  opacity: 1;
+  background: rgba(255, 193, 7, 0.08);
+  color: #ffc107;
+}
+
+.category.active {
+  background: #ffc107;
+  color: black;
+  opacity: 1;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.checkbox:hover {
+  opacity: 1;
+}
+
+.checkbox input {
+  accent-color: #ffc107;
+  cursor: pointer;
+}
+
+/* SLIDER */
+.slider {
+  width: 100%;
+  margin-top: 10px;
+  accent-color: #ffc107;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .shop-sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+}

@@ -1,0 +1,144 @@
+/* PAGE BACKGROUND */
+.product-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at 60% 30%, #1e3a8a33, transparent 40%),
+    radial-gradient(circle at 30% 70%, #1e40af22, transparent 50%),
+    linear-gradient(90deg, #020817 0%, #0b1f44 50%, #020817 100%);
+
+  font-family: Segoe UI, sans-serif;
+  color: white;
+}
+
+/* CONTAINER */
+.product-container {
+  width: 90%;
+  max-width: 1200px;
+
+  display: flex;
+  gap: 60px;
+  align-items: center;
+
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+.product-image-box {
+  flex: 1;
+}
+
+.product-image-box img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.product-image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* INFO */
+.product-info {
+  flex: 1;
+}
+
+.product-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-size: 32px;
+  color: #ffc107;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* SIZE BUTTONS */
+.sizes {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.sizes button {
+  padding: 12px 22px;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sizes button:hover {
+  border-color: #ffc107;
+}
+
+.active-size {
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  color: black;
+  border: none;
+}
+
+/* BUTTON */
+.add-btn {
+  padding: 18px 45px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+
+  font-weight: bold;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255,193,7,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .product-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .sizes {
+    justify-content: center;
+  }
+
+  .product-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-title {
+    font-size: 28px;
+  }
+
+  .product-price {
+    font-size: 24px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+}

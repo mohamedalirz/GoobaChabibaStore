@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&display=swap');
+
+body {
+  margin: 0;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 25px;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(to bottom, #0B0F1A, #070707);
+  border-bottom: 2px solid #1a1a1a;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #f7b500;
+  text-decoration: none;
+}
+
+/* DESKTOP NAV */
+.desktop-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #f7b500;
+}
+
+/* RIGHT SECTION */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gold-icon {
+  background: linear-gradient(145deg, #f7b500, #ffcc33);
+  color: #000;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.gold-icon:hover {
+  box-shadow: 0 0 15px rgba(247,181,0,0.6);
+  transform: translateY(-2px);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE SIDEBAR */
+.mobile-sidebar {
+  position: fixed;
+  top: 60px;
+  right: -260px;
+  width: 250px;
+  height: calc(100vh - 60px);
+  background: #0B0F1A;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.mobile-sidebar a:hover {
+  background: #111;
+  color: #f7b500;
+}
+
+.mobile-sidebar.active {
+  right: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}

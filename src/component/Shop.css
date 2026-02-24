@@ -1,0 +1,50 @@
+/* ========================= */
+/* MAIN SHOP LAYOUT */
+/* ========================= */
+
+.shop-container {
+  display: flex;
+  min-height: 100vh;
+  background: #0b0f1a;
+}
+
+/* ========================= */
+/* PRODUCTS AREA */
+/* ========================= */
+
+.products-area {
+  flex: 1;
+  padding: 60px 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .products-area {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-container {
+    flex-direction: column;
+  }
+
+  .products-area {
+    padding: 40px 25px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-area {
+    padding: 30px 20px;
+  }
+}

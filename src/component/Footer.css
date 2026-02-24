@@ -1,0 +1,78 @@
+.footer-container {
+  width: 100%;
+  height: 400px;
+  background: #1f1f2e; /* matches website dark theme */
+  color: #fff;
+  padding: 60px 20px;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.footer-content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Social icons */
+.footer-socials {
+  margin: 30px 0;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 28px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #667eea; /* matches header gradient */
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the content horizontally */
+  gap: 10px; /* space between text and logo */
+  margin-top: 25px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+
+.devign-logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+
+.devign-logo:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+  cursor: pointer;
+}
