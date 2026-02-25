@@ -14,7 +14,6 @@ function Header() {
         <nav className="nav desktop-nav">
           <a href="/" className="nav-link active">HOME</a>
           <a href="/shop" className="nav-link">SHOP</a>
-          <a href="#membership" className="nav-link">MEMBERSHIP</a>
           <a href="https://kick.com/gooba_off" target="_blank" rel="noopener noreferrer" className="nav-link">LIVE</a>
           <a href="/Footer" className="nav-link">ABOUT</a>
         </nav>
