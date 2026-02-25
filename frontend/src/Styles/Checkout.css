@@ -1,0 +1,271 @@
+/* ================= WRAPPER ================= */
+
+.checkout-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: #0b0f1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url("../../public/banner2.png") center/cover no-repeat;
+
+}
+
+.checkout-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 15, 0.85); /* darkness level */
+  z-index: 1;
+}
+
+/* 🔥 Fire Glow */
+.fire-bg {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle,
+      rgba(255,170,0,0.6) 0%,
+      rgba(255,120,0,0.4) 25%,
+      transparent 60%);
+  filter: blur(120px);
+  animation: firePulse 6s ease-in-out infinite;
+}
+
+/* ✨ Particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 30% 70%, rgba(255,200,100,0.8), transparent),
+    radial-gradient(2px 2px at 60% 40%, rgba(255,150,0,0.7), transparent);
+  animation: floatParticles 8s linear infinite;
+  opacity: 0.6;
+}
+
+/* ================= CONTAINER ================= */
+
+.checkout-container {
+  position: relative;
+  width: 95%;
+  max-width: 1100px;
+  display: flex;
+  gap: 40px;
+  z-index: 2;
+}
+
+/* ================= FORM ================= */
+
+.checkout-form {
+  flex: 2;
+  background: rgba(20,25,40,0.85);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,180,0,0.2);
+  box-shadow: 0 0 40px rgba(255,170,0,0.2);
+}
+
+.checkout-form h2 {
+  margin-bottom: 20px;
+}
+
+.checkout-form h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #f5b301;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #111827;
+  color: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+.checkout-form input:focus {
+  border-color: #f5b301;
+}
+
+.card-row {
+  display: flex;
+  gap: 15px;
+}
+
+.pay-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f5b301, #ffcc33);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255,180,0,0.4);
+}
+
+.pay-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(255,180,0,0.7);
+}
+
+/* ================= ORDER SUMMARY UPGRADE ================= */
+
+.order-summary {
+  flex: 1;
+  position: sticky;
+  top: 40px;
+  background: rgba(15,18,30,0.9);
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,170,0,0.25);
+  box-shadow:
+    0 0 60px rgba(255,170,0,0.15),
+    inset 0 0 20px rgba(255,120,0,0.1);
+  transition: 0.3s;
+}
+
+.order-summary:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 80px rgba(255,170,0,0.25),
+    inset 0 0 30px rgba(255,140,0,0.2);
+}
+
+.summary-title {
+  font-size: 22px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: #f5b301;
+}
+
+/* ===== PRODUCT ITEM ===== */
+
+.summary-product {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  transition: 0.3s;
+}
+
+.summary-product:hover {
+  background: rgba(255,170,0,0.08);
+}
+
+.summary-product img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.qty {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.price {
+  font-weight: bold;
+  color: #f5b301;
+}
+
+/* ===== DIVIDER ===== */
+
+.summary-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 20px 0;
+}
+
+/* ===== BREAKDOWN ROWS ===== */
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* ===== TOTAL ===== */
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,170,0,0.3);
+  font-size: 20px;
+}
+
+.summary-total strong {
+  color: #f5b301;
+  text-shadow: 0 0 10px rgba(255,170,0,0.5);
+}
+
+/* ===== BUTTON ===== */
+
+.secure-checkout {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f5b301, #ffcc33);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 25px rgba(255,170,0,0.3);
+}
+
+.secure-checkout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255,170,0,0.6);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes firePulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+@keyframes floatParticles {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+}

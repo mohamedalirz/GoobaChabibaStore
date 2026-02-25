@@ -4,6 +4,7 @@ import "./header.css";
 
 function Header() {
   const [open, setOpen] = useState(false);
+;
 
   return (
     <>
@@ -23,7 +24,7 @@ function Header() {
           
 
           <div className="gold-icon">
-            <a href="/cart/:userId"><FaShoppingCart /></a>
+            <a href="/cart"><FaShoppingCart /></a>
           </div>
 
           {/* Mobile Menu Icon */}

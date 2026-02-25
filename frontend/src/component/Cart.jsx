@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "../Styles/Cart.css";
+import { useNavigate } from "react-router-dom";
 import hoodie from "../assets/capuche.png";
 import tshirt from "../assets/capuche.png";
 
 function Cart() {
+  const navigate = useNavigate();
   const [qty1, setQty1] = useState(2);
   const [qty2, setQty2] = useState(3);
 
@@ -64,7 +66,7 @@ function Cart() {
             <span>Total</span>
             <strong>${total}</strong>
           </div>
-          <button className="checkout-btn">ADD TO CART</button>
+          <button className="checkout-btn" onClick={() => navigate("/checkout")}>ADD TO CART</button>
         </div>
       </div>
     </div>
