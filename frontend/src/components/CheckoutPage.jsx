@@ -52,13 +52,13 @@ export default function CheckoutPage() {
     await axios.post(`http://localhost:3636/orders/${userId}`,{
       idOrder:Date.now(),
       userId:Number(userId),
-      name:form.name,
+      name:form.name, // username auto
       address:form.address,
       city:form.city,
       phone:form.city,
       products:checkoutProducts,
       totalAmount:totalAmount, 
-      status:"waiting"
+      status:"waiting" //delivering
     })
 
     handleDeleteCarte(userId); 
